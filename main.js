@@ -1,6 +1,6 @@
-// ================================================================
-// i18n core - loads from /_locale/{lang}/messages.json
-// ================================================================
+// Text Mini Menu
+// Copyright 2boom, 2026
+
 let currentLocale = 'en';
 let translations = {};
 
