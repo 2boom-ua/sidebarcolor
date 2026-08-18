@@ -9,7 +9,7 @@
 [![Version](https://img.shields.io/badge/version-1.0-blue.svg)](https://github.com/2boom-main)
 
 
-**CSS Color Converter** is a lightweight and powerful tool (designed as a browser extension popup / sidepanel) for instantly converting colors between popular web formats, adjusting transparency, generating CSS filters, and exploring shade variations.
+**CSS Color Converter** is a lightweight and powerful tool (designed as a browser extension sidepanel) for instantly converting colors between popular web formats, adjusting transparency, generating CSS filters, and exploring shade variations.
 
 ---
 
@@ -45,7 +45,7 @@
 
 * **HTML5 / CSS3:** Modern custom properties, responsive design, smooth transitions.
 * **Vanilla JavaScript (ES6+):** Dependency-free, fast, and optimized implementation.
-* **Chrome Extension API:** i18n localization and sidepanel/popup support.
+* **Chrome Extension API:** i18n localization and sidepanel support.
 
 ---
 
