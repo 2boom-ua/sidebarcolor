@@ -7,7 +7,6 @@
   "author": "(c) 2boom 2026",
   "permissions": [
     "sidePanel",
-    "clipboardRead",
     "clipboardWrite"
   ],
   "host_permissions": [
