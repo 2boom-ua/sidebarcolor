@@ -1,0 +1,47 @@
+{
+  "appName": {
+    "message": "CSS Color Converter"
+  },
+  "appDesc": {
+    "message": "Convert colors between HEX, RGB, HSL, RGBA and CSS filters"
+  },
+  "appTitle": {
+    "message": "Color Converter"
+  },
+  "hexLabel": {
+    "message": "HEX"
+  },
+  "rgbLabel": {
+    "message": "RGB"
+  },
+  "hslLabel": {
+    "message": "HSL"
+  },
+  "rgbaLabel": {
+    "message": "RGBA"
+  },
+  "filterLabel": {
+    "message": "FILTER"
+  },
+  "alphaLabel": {
+    "message": "Alpha"
+  },
+  "hexPlaceholder": {
+    "message": "#RRGGBB"
+  },
+  "copyTitle": {
+    "message": "Copy"
+  },
+  "pasteTitle": {
+    "message": "Paste"
+  },
+  "clearTitle": {
+    "message": "Clear"
+  },
+  "colorPickerTitle": {
+    "message": "Pickup color"
+  },
+  "copiedText": {
+    "message": "Copied!"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "appName": {
+    "message": "CSS Конвертер кольорів"
+  },
+  "appDesc": {
+    "message": "Конвертує кольори між HEX, RGB, HSL, RGBA та CSS-фільтрами"
+  },
+  "appTitle": {
+    "message": "Конвертер кольорів"
+  },
+  "hexLabel": {
+    "message": "HEX"
+  },
+  "rgbLabel": {
+    "message": "RGB"
+  },
+  "hslLabel": {
+    "message": "HSL"
+  },
+  "rgbaLabel": {
+    "message": "RGBA"
+  },
+  "filterLabel": {
+    "message": "FILTER"
+  },
+  "alphaLabel": {
+    "message": "Alpha"
+  },
+  "hexPlaceholder": {
+    "message": "#RRGGBB"
+  },
+  "copyTitle": {
+    "message": "Копіювати"
+  },
+  "pasteTitle": {
+    "message": "Вставити"
+  },
+  "clearTitle": {
+    "message": "Очистити"
+  },
+  "colorPickerTitle": {
+    "message": "Вибрати колір"
+  },
+  "copiedText": {
+    "message": "Скопійовано!"
+  }
+}

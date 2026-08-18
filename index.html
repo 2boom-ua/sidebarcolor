@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Color Converter</title>
+    <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+    <div class="panel" role="main">
+
+        <!-- CONTENT -->
+        <div class="panel-content">
+            
+            <!-- ====== NEW: BASE COLORS & SHADE STRIP ====== -->
+            <div class="color-picker-section">
+                <!-- Base color circles -->
+                <div class="base-colors-row" id="baseColorsRow">
+                    <span class="label-sm" data-i18n="baseLabel">Base</span>
+                    <div class="base-circles" id="baseCircles"></div>
+                </div>
+                
+                <!-- Generated 1x10 shade strip -->
+                <div class="shade-strip" id="shadeStrip"></div>
+            </div>
+            <!-- =========================================== -->
+
+            <!-- HEX INPUT -->
+            <label class="label-sm" for="hexInput" data-i18n="hexLabel">HEX</label>
+            <div class="hex-input-row">
+                
+                <span class="color-swatch tooltip-trigger" id="colorSwatch">
+                    <input type="color" id="colorPicker" value="#FFFFFF" />
+                    <span class="tooltip-text" data-i18n="colorPickerTitle">Pickup</span>
+                </span>
+                <input type="text" id="hexInput" class="hex-input mono" value="#FFFFFF" maxlength="7" spellcheck="false" data-i18n-placeholder="hexPlaceholder" />
+                <button class="paste-btn tooltip-trigger" id="pasteBtn" data-i18n-title="pasteTitle">
+                    <img src="icons/paste.svg" alt="Paste" width="20" height="20" />
+                    <span class="tooltip-text" data-i18n="pasteTitle">Paste</span>
+                </button>
+                <button class="clear-btn tooltip-trigger" id="clearBtn" data-i18n-title="clearTitle">
+                    <img src="icons/clear.svg" alt="Clear" width="20" height="20" />
+                    <span class="tooltip-text" data-i18n="clearTitle">Clear</span>
+                </button>
+            </div>
+
+            <!-- RESULT LIST -->
+            <div class="result-list" id="resultList">
+                <!-- HEX -->
+                <div class="result-row" data-format="hex">
+                    <span class="result-label" data-i18n="hexLabel">HEX</span>
+                    <span class="result-value mono" id="hexValue">#FFFFFF</span>
+                    <button class="copy-btn tooltip-trigger" data-copy="hex" data-i18n-title="copyTitle">
+                        <img src="icons/copy.svg" alt="Copy" width="18" height="18" />
+                        <span class="tooltip-text" data-i18n="copyTitle">Copy to clipboard</span>
+                    </button>
+                </div>
+
+                <!-- RGB -->
+                <div class="result-row" data-format="rgb">
+                    <span class="result-label" data-i18n="rgbLabel">RGB</span>
+                    <span class="result-value mono" id="rgbValue">rgb(255, 255, 255)</span>
+                    <button class="copy-btn tooltip-trigger" data-copy="rgb" data-i18n-title="copyTitle">
+                        <img src="icons/copy.svg" alt="Copy" width="18" height="18" />
+                        <span class="tooltip-text" data-i18n="copyTitle">Copy to clipboard</span>
+                    </button>
+                </div>
+                
+                <!-- HSL -->
+                <div class="result-row" data-format="hsl">
+                    <span class="result-label" data-i18n="hslLabel">HSL</span>
+                    <span class="result-value mono" id="hslValue">hsl(0, 0%, 100%)</span>
+                    <button class="copy-btn tooltip-trigger" data-copy="hsl" data-i18n-title="copyTitle">
+                        <img src="icons/copy.svg" alt="Copy" width="18" height="18" />
+                        <span class="tooltip-text" data-i18n="copyTitle">Copy to clipboard</span>
+                    </button>
+                </div>
+                
+                <!-- OKLCH -->
+                <div class="result-row" data-format="oklch">
+                    <span class="result-label" data-i18n="oklchLabel">OKLCH</span>
+                    <span class="result-value mono" id="oklchValue">oklch(1.00 0 0)</span>
+                    <button class="copy-btn tooltip-trigger" data-copy="oklch" data-i18n-title="copyTitle">
+                        <img src="icons/copy.svg" alt="Copy" width="18" height="18" />
+                        <span class="tooltip-text" data-i18n="copyTitle">Copy to clipboard</span>
+                    </button>
+                </div>
+                
+                <!-- CMYK -->
+                <div class="result-row" data-format="cmyk">
+                    <span class="result-label" data-i18n="cmykLabel">CMYK</span>
+                    <span class="result-value mono" id="cmykValue">cmyk(0%, 0%, 0%, 0%)</span>
+                    <button class="copy-btn tooltip-trigger" data-copy="cmyk" data-i18n-title="copyTitle">
+                        <img src="icons/copy.svg" alt="Copy" width="18" height="18" />
+                        <span class="tooltip-text" data-i18n="copyTitle">Copy to clipboard</span>
+                    </button>
+                </div>
+
+                <!-- FILTER -->
+                <div class="result-row filter-row" data-format="filter">
+                    <span class="result-label" data-i18n="filterLabel">FILTER</span>
+                    <div class="filter-values">
+                        <span class="filter-line" id="filterBrightness">brightness(1.00)</span>
+                        <span class="filter-line" id="filterContrast">contrast(1.00)</span>
+                        <span class="filter-line" id="filterHueRotate">hue-rotate(0.0deg)</span>
+                        <span class="filter-line" id="filterSaturate">saturate(1.00)</span>
+                        <span class="filter-line" id="filterSepia">sepia(0.00)</span>
+                    </div>
+                    <button class="copy-btn tooltip-trigger" data-copy="filter" data-i18n-title="copyTitle">
+                        <img src="icons/copy.svg" alt="Copy" width="18" height="18" />
+                        <span class="tooltip-text" data-i18n="copyTitle">Copy to clipboard</span>
+                    </button>
+                </div>
+            
+
+                <!-- RGBA -->
+                <div class="result-row" data-format="rgba">
+                    <span class="result-label" data-i18n="rgbaLabel">RGBA</span>
+                    <span class="result-value mono" id="rgbaValue">rgba(255, 255, 255, 1.00)</span>
+                    <button class="copy-btn tooltip-trigger" data-copy="rgba" data-i18n-title="copyTitle">
+                        <img src="icons/copy.svg" alt="Copy" width="18" height="18" />
+                        <span class="tooltip-text" data-i18n="copyTitle">Copy to clipboard</span>
+                    </button>
+                </div>
+            </div>
+            <!-- ALPHA -->
+            <div class="alpha-row">
+                <span class="label-sm" data-i18n="alphaLabel">Alpha</span>
+                <input type="range" id="alphaSlider" min="0" max="1" step="0.01" value="1" />
+                <span class="alpha-value" id="alphaValue">1.00</span>
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <span><strong>CSS Color</strong> Converter, &copy; 2boom, 2026.</span>
+        </div>
+
+    </div>
+
+    <!-- TOAST -->
+    <div class="toast-container" id="toastContainer">
+        <div class="toast" id="toast" data-i18n="copiedText">Copied!</div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
