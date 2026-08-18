@@ -1,4 +1,4 @@
-// Sidebar CSS Color - Chrome/Edge Extension
+// CSS Color Converter
 // Copyright 2boom, 2026
 
 chrome.sidePanel
