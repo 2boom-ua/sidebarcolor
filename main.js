@@ -126,7 +126,7 @@ function loadMessages(locale) {
     const alphaSlider = document.getElementById('alphaSlider');
     const alphaValueEl = document.getElementById('alphaValue');
     const pasteBtn = document.getElementById('pasteBtn');
-    const clearBtn = document.getElementById('clearBtn');
+    const copyInputBtn = document.getElementById('copyInputBtn');
     const toast = document.getElementById('toast');
 
     // ===== NEW DOM refs =====
@@ -629,11 +629,39 @@ function init() {
                 } catch (e2) { /* ignore */ }
             }
         });
-
-        clearBtn.addEventListener('click', function(e) {
+        
+        copyInputBtn.addEventListener('click', function(e) {
             e.stopPropagation();
-            clearColor();
+            const text = hexInput.value;
+            if (!text) return;
+            
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text).then(() => showCopied(this)).catch(() => {
+                    const ta = document.createElement('textarea');
+                    ta.value = text;
+                    ta.style.position = 'fixed';
+                    ta.style.left = '-9999px';
+                    ta.style.top = '0';
+                    document.body.appendChild(ta);
+                    ta.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(ta);
+                    showCopied(this);
+                });
+            } else {
+                const ta = document.createElement('textarea');
+                ta.value = text;
+                ta.style.position = 'fixed';
+                ta.style.left = '-9999px';
+                ta.style.top = '0';
+                document.body.appendChild(ta);
+                ta.select();
+                document.execCommand('copy');
+                document.body.removeChild(ta);
+                showCopied(this);
+            }
         });
+
     });
 }
 
