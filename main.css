@@ -280,8 +280,7 @@ body {
     margin-left: 10px;
 }
 
-.paste-btn,
-.clear-btn {
+.paste-btn {
     width: 48px;
     height: 48px;
     border: 1.5px solid var(--input-border);
@@ -296,22 +295,17 @@ body {
     padding: 0;
     position: relative;
 }
-.paste-btn:hover,
-.clear-btn:hover {
+.paste-btn:hover {
     border-color: var(--input-border);
     background: var(--hover-bg);
 }
-.paste-btn img,
-.clear-btn img {
+.paste-btn img {
     width: 20px;
     height: 20px;
     filter: var(--button-icon-filter);
     transition: opacity 0.2s, filter 0.2s;
 }
-.clear-btn:hover img {
-    filter: brightness(0) saturate(100%) invert(27%) sepia(100%) saturate(7483%) hue-rotate(0deg) brightness(94%) contrast(109%);
-}
-
+ 
 /* ===== RESULT ROWS ===== */
 .result-list {
     margin: 20px 0 18px 0;
@@ -550,13 +544,11 @@ body {
         padding: 8px 12px;
     }
     .color-swatch,
-    .paste-btn,
-    .clear-btn {
+    .paste-btn {
         width: 42px;
         height: 42px;
     }
-    .paste-btn img,
-    .clear-btn img {
+    .paste-btn img {
         width: 18px;
         height: 18px;
     }
