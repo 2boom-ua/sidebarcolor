@@ -1,4 +1,4 @@
-// Text Mini Menu
+// CSS Color Converter
 // Copyright 2boom, 2026
 
 let currentLocale = 'en';
