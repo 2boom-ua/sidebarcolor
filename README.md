@@ -41,7 +41,7 @@
 
 ---
 
-## 🛠 Built With
+## Built With
 
 * **HTML5 / CSS3:** Modern custom properties, responsive design, smooth transitions.
 * **Vanilla JavaScript (ES6+):** Dependency-free, fast, and optimized implementation.
@@ -49,6 +49,6 @@
 
 ---
 
-<p align="center">
-  Developed by <strong>2boom</strong> &copy; 2026
-</p>
+## License
+
+Copyright © 2026 2boom.
