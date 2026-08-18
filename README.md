@@ -1,4 +1,8 @@
-# 🎨 CSS Color Converter
+<div align="center">  
+    <img src="https://github.com/2boom-ua/sidebarcolor/blob/main/icons/icon-128.png?raw=true" alt="" width="128" height="128">
+</div>
+
+# CSS Color Converter
 
 > Quick, precise, and interactive color conversion tool for web developers and UI/UX designers.
 
