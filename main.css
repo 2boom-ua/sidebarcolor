@@ -21,6 +21,7 @@
     --icon-filter: brightness(0) saturate(100%) invert(38%) sepia(4%) saturate(472%) hue-rotate(169deg) brightness(93%) contrast(90%);
     --button-icon-filter: brightness(0) saturate(100%) invert(38%) sepia(4%) saturate(472%) hue-rotate(169deg) brightness(93%) contrast(90%);
     --focus-color: #00B05A;
+    --error-color: #f44336;
     --focus-shadow: rgba(26, 115, 232, 0.25);
     --radius-button: 6px;
 }
@@ -47,6 +48,7 @@
         --focus-color: #8ab4f8;
         --focus-shadow: rgba(138, 180, 248, 0.25);
     }
+    
 }
 
 * {
@@ -102,7 +104,7 @@ body {
 .footer {
     flex-shrink: 0;
     width: 100%;
-    padding: 10px 0 14px 0;
+    padding: 10px 0 8px 0;
     background: var(--bg-color);
     color: var(--time-color);
     text-align: center;
@@ -241,8 +243,8 @@ body {
     box-shadow: none;
 }
 .hex-input-row .hex-input.error {
-    border-color: #e74c3c;
-    background: #fff0f0;
+    border-color: var(--error-color);
+    background: var(--bg-color);
 }
 
 .color-swatch {
@@ -618,4 +620,23 @@ body {
     .alpha-row .label-sm {
         min-width: 100%;
     }
+}
+
+.hex-input-row .hex-input {
+    flex: 1;
+    padding: 10px 14px;
+    border: 1.5px solid var(--input-border);
+    border-radius: 10px;
+    font-size: 16px;
+    background: var(--bg-color);
+    color: var(--text-color);
+    outline: none;
+    transition: border-color 0.2s, background 0.3s, color 0.3s;
+    min-width: 0;
+}
+
+.hex-input-row .hex-input:focus {
+    border-color: var(--focus-color);
+    outline: none;
+    box-shadow: none;
 }
