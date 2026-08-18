@@ -26,7 +26,8 @@
 
 ---
 
-## Installation
+### From Chrome Web Store or Edge Add-ons
+[![Available in Microsoft Edge Add-ons](https://img.shields.io/badge/Microsoft%20Edge%20Add--ons-Install-0078D7?logo=microsoftedge&logoColor=white)](https://microsoftedge.microsoft.com/addons/detail/css-color-converter/omlfddmpjplkgjmgapjhffcccelchmkj)
 
 ### As a Chrome / Edge Extension (Developer Mode):
 1. Clone or download this repository:
