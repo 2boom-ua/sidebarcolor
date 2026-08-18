@@ -278,6 +278,7 @@ function updateUI() {
     const cmyk = rgbToCmyk(currentR, currentG, currentB);
 
     const color = `rgba(${currentR}, ${currentG}, ${currentB}, ${currentAlpha})`;
+    colorSwatch.style.setProperty('--swatch-color', color);
     colorSwatch.style.background = color;
 
     if (hexValue) hexValue.textContent = hex;
