@@ -6,15 +6,14 @@
 
 > Quick, precise, and interactive color conversion tool for web developers and UI/UX designers.
 
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/2boom-main)
-[![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-yellow)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![CSS3](https://img.shields.io/badge/CSS3-Modern-blue)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![Version](https://img.shields.io/badge/version-1.0-blue.svg)](https://github.com/2boom-main)
+
 
 **CSS Color Converter** is a lightweight and powerful tool (designed as a browser extension popup / sidepanel) for instantly converting colors between popular web formats, adjusting transparency, generating CSS filters, and exploring shade variations.
 
 ---
 
-## ✨ Features
+## Features
 
 * **Multi-format Conversion:** Instant conversion between `HEX`, `RGB`, `HSL`, `OKLCH`, `CMYK`, and `RGBA`.
 * **CSS Filter Generator:** Calculates CSS filter parameters (`brightness`, `contrast`, `hue-rotate`, `saturate`, `sepia`) to replicate target colors.
@@ -27,7 +26,7 @@
 
 ---
 
-## 🚀 Installation
+## Installation
 
 ### As a Chrome / Edge Extension (Developer Mode):
 1. Clone or download this repository:
