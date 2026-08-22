@@ -477,16 +477,6 @@ body {
     z-index: 1000;
 }
 
-.tooltip-trigger .tooltip-text::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    border: 5px solid transparent;
-    border-top-color: var(--tooltip-bg);
-}
-
 .tooltip-trigger:hover .tooltip-text {
     visibility: visible;
     opacity: 1;

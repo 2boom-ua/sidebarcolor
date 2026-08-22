@@ -42,12 +42,6 @@ function applyTranslations() {
         const val = t(key);
         if (val && val !== key && typeof val === 'string') el.placeholder = val;
     });
-
-    document.querySelectorAll('[data-i18n-title]').forEach(el => {
-        const key = el.getAttribute('data-i18n-title');
-        const val = t(key);
-        if (val && val !== key && typeof val === 'string') el.title = val;
-    });
 }
 
 function loadMessages(locale) {
